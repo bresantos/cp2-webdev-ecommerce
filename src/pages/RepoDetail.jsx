@@ -8,7 +8,7 @@ export default function RepoDetails() {
   useEffect(() => {
     console.log("ID do produto:", id);
     async function fetchRepo() {
-      const res = await fetch(`https://fakestoreapi.com/products/category/nome-categoria/${id}`);
+      const res = await fetch(`https://fakestoreapi.com/${id}`);
       const data = await res.json();
       console.log("data", data);
       setDetails(data);

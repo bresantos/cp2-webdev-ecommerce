@@ -10,17 +10,17 @@ export default function Home() {
   const API = import.meta.env.VITE_GITHUB_API;
 
   useEffect(() => {
-     fetch(`${API}category/electronics`, {})
+     fetch(`${API}products/category/electronics`, {})
       .then(res => res.json())
       .then(data => {setEletronicos(data.items) })
       .catch(err => console.error(err));
 
-     fetch(`${API}category/jewelery`, {})
+     fetch(`${API}products/category/jewelery`, {})
       .then(res => res.json())
       .then(data => setJoias(data.items))
       .catch(err => console.error(err));
 
-     fetch(`${API}category/men's%20clothing`, {})
+     fetch(`${API}products/category/men's%20clothing`, {})
       .then(res => res.json())
       .then(data => setRoupasMasculinas(data.items))
       .catch(err => console.error(err));
