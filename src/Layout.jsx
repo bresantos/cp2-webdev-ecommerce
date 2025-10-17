@@ -1,11 +1,12 @@
+import { Outlet } from "react-router-dom";
 import Navbar from "./components/Navbar";
 
 export default function Layout() {
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
-      <main>
-        <p> Conteúdo principal</p>
+      <main className="p-6">
+        <Outlet />
       </main>
     </div>
   );
